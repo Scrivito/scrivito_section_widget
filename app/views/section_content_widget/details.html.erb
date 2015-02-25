@@ -1,0 +1,8 @@
+<div class="details-view" >
+  <h4>Background Color</h4>
+  <%= scrivito_toggle_button_editor widget, :background_color, Obj.selectable_color_classes('scrivito_content_widget') do |text| %>
+    <% scrivito_tag(:button, widget, :background_color, class: text, data: {editor: 'scrivito-toggle-button', content: text}) do
+        text
+      end %>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+.scrivito_section_parallax_widget {
+  background-size: cover;
+}
+
+.scrivito_section_video_widget video {
+  width: 100%;
+  display: block;
+}
+
+.scrivito_section_video_widget .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.scrivito_section_parallax_widget .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,2 @@
+class SectionVideoWidget < Widget
+end

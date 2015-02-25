@@ -1,0 +1,15 @@
+<div class="details-view">
+  <div class="video-wrapper">
+    <video class="embed-responsive-item" controls="<%= true %>">
+      <% if @obj.name.ends_with? '.mp4' %>
+        <source src="<%= @obj.try(:binary_url) %>" type="video/mp4"></source>
+      <% end %>
+      <% if @obj.name.ends_with? '.webm' %>
+        <source src="<%= @obj.try(:binary_url) %>" type="video/webm"></source>
+      <% end %>
+      <% if @obj.name.ends_with? '.ogg' %>
+        <source src="<%= @obj.try(:binary_url) %>" type="video/ogg"></source>
+      <% end %>
+    </video>
+  </div>
+</div>

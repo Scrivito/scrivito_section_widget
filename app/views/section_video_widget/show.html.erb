@@ -1,0 +1,14 @@
+<section class="scrivito_section_video_widget">
+  <div
+  class="video-tag"
+  data-source-mp4="<%= widget.background_video_mp4.try(:binary_url) %>"
+  data-source-ogg="<%= widget.background_video_ogg.try(:binary_url) %>"
+  data-source-webm="<%= widget.background_video_webm.try(:binary_url) %>"
+  data-image="<%= widget.background_image.try(:binary_url) %>"
+  data-height="<%= widget.height %>">
+    <div class="parallax" style="height: <%= widget.height %>; background-image: url(<%= widget.background_image.try(:binary_url) %>)">
+    </div>
+  </div>
+  <%= scrivito_tag(:div, widget, :section_content, class: 'container') %>
+  <div class="overlay"></div>
+</section>

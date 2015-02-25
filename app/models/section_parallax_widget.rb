@@ -1,0 +1,2 @@
+class SectionParallaxWidget < Widget
+end

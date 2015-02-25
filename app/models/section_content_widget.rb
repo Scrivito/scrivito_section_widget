@@ -1,0 +1,2 @@
+class SectionContentWidget < Widget
+end
