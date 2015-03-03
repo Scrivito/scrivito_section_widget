@@ -1,5 +1,6 @@
 .scrivito_section_parallax_widget {
   background-size: cover;
+  background-position: center center;
 }
 
 .scrivito_section_video_widget video {
