@@ -1,3 +1,4 @@
-<section class="parallax scrivito_section_parallax_widget" style="background-image: url(<%= widget.background_image.try(:binary_url) %>); height: <%= widget.height %>">
+<section class="parallax scrivito_section_parallax_widget" style="height: <%= widget.height %>">
+  <div class="parallax-image" style="background-image: url(<%= widget.background_image.try(:binary_url) %>)"></div>
   <%= scrivito_tag(:div, widget, :section_content, class: 'container') %>
 </section>
