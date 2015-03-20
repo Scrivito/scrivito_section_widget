@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scrivito_section_widgets (0.0.6)
+    scrivito_section_widgets (0.0.7)
       bundler
       scrivito_sdk
 

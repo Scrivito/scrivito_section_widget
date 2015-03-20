@@ -8,8 +8,6 @@ $(function(){
 
   var elems = $(".parallax-image");
 
-  set_dimension(elems);
-
   if($('body').width() > 1024) {
     set_background_positions(elems);
 
@@ -21,16 +19,23 @@ $(function(){
   $(window).on('resize', function(event) {
     set_dimension(elems);
   });
+
+  set_dimension(elems);
 });
 
 function set_dimension(elems) {
   var height = 0;
+  var container = null;
 
   $.each(elems, function(i, elem) {
+    container = $(elem).parents('.parallax');
     height = $(elem).get(0).clientHeight / 1.3;
 
-    if(height > 0)
-      $(elem).parents('.parallax').css('height', height);
+    if(height > 0) {
+      container.css({
+        'height': height,
+      });
+    }
   });
 }
 
