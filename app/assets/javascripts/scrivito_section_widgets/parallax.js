@@ -6,33 +6,31 @@ $(function(){
    || window.msRequestAnimationFrame
    || function(f){setTimeout(f, 1000/60)}
 
-  var elems = [];
+  var elems = $(".parallax-image");
+
+  set_dimension(elems);
 
   if($('body').width() > 1024) {
-    $(".parallax-image").each(function() {
-      var elem = $(this);
-
-      set_background_position(elem);
-      set_dimension(elems);
-
-      elems.push(elem);
-    });
+    set_background_positions(elems);
 
     $(window).on('scroll', function(event) {
-      window.requestAnimationFrame(function(){ set_background_positions(elems) });
-    });
-
-    $(window).on('resize', function(event) {
-      window.requestAnimationFrame(function(){ set_dimension(elems) });
+      window.requestAnimationFrame(function(){ set_background_positions(elems); });
     });
   }
+
+  $(window).on('resize', function(event) {
+    set_dimension(elems);
+  });
 });
 
 function set_dimension(elems) {
   var height = 0;
+
   $.each(elems, function(i, elem) {
-    height = $(elem).parents('.parallax').height();
-    $(elem).css('height', height * 2);
+    height = $(elem).get(0).clientHeight / 1.3;
+
+    if(height > 0)
+      $(elem).parents('.parallax').css('min-height', height);
   });
 }
 
@@ -59,5 +57,5 @@ function calulate_position(elem) {
 }
 
 function caluclate_offset(elem) {
-  return window.pageYOffset - elem.offset().top;
+  return window.pageYOffset - $(elem).offset().top;
 }

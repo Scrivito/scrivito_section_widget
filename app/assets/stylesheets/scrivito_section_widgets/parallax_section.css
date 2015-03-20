@@ -8,9 +8,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
+  height: auto;
 }
 
 .scrivito_section_video_widget video {
