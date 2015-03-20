@@ -30,7 +30,7 @@ function set_dimension(elems) {
     height = $(elem).get(0).clientHeight / 1.3;
 
     if(height > 0)
-      $(elem).parents('.parallax').css('min-height', height);
+      $(elem).parents('.parallax').css('height', height);
   });
 }
 
