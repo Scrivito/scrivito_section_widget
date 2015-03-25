@@ -38,13 +38,15 @@ class CreateSectionWidgets < ::Scrivito::Migration
       ]
     )
 
-    Scrivito::ObjClass.create(
-      name: 'Video',
-      type: 'generic',
-      is_binary: true,
-      title: 'Video',
-      attributes: []
-    )
+    unless Scrivito::ObjClass.all.to_a.select {|a| a.name == "Video"}.empty?
+      Scrivito::ObjClass.create(
+        name: 'Video',
+        type: 'generic',
+        is_binary: true,
+        title: 'Video',
+        attributes: []
+      )
+    end
 
   end
 end

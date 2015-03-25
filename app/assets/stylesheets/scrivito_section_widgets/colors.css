@@ -1,0 +1,65 @@
+/* background colors */
+.transparent {
+  background-color: transparent !important;
+}
+
+.black {
+  background-color: #33312d !important;
+}
+
+.gray {
+  background-color: #a0a0a0 !important;
+}
+
+.light-gray {
+  background-color: #eee !important;
+}
+
+.red {
+  background-color: #c5463f !important;
+}
+
+.green {
+  background-color: #439439 !important;
+}
+
+.blue {
+  background-color: #3f86ac !important;
+}
+
+.yellow {
+  background-color: #e1d00e !important;
+}
+
+/* icon colors */
+i.transparent {
+  color: transparent !important;
+}
+
+i.black {
+  color: #33312d !important;
+}
+
+i.gray {
+  color: #a0a0a0 !important;
+}
+
+i.light-gray {
+  color: #eee !important;
+}
+
+i.red {
+  color: #c5463f !important;
+}
+
+i.green {
+  color: #439439 !important;
+}
+
+i.blue {
+  color: #3f86ac !important;
+}
+
+i.yellow {
+  color: #e1d00e !important;
+}

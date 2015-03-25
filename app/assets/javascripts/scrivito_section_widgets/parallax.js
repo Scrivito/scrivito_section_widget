@@ -14,13 +14,13 @@ $(function(){
     $(window).on('scroll', function(event) {
       window.requestAnimationFrame(function(){ set_background_positions(elems); });
     });
+  } else {
+    set_dimension(elems);
   }
 
   $(window).on('resize', function(event) {
     set_dimension(elems);
   });
-
-  set_dimension(elems);
 });
 
 function set_dimension(elems) {
