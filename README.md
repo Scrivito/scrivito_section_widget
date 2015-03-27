@@ -19,9 +19,12 @@ Add scripts to your script manifest
 
 ## Customization
 
-You need to add a method selectable_color_classes to your obj.rb. The parameter widget_name is to make colors selectable for different widgets if needed.
+By default theire following colors avaiable:
+transparent black gray light-gray red green blue yellow
 
-    def selfselectable_color_classes(obj_name, field_name)
+if you which to change the selection than add call method `selectable_color_classes` to your obj.rb. The parameters obj_class_name and field_name can be used to restrict the selection for given widgets and/or fields.
+
+    def self.selectable_color_classes(obj_class_name, field_name)
       return ["red","green","blue"]
     end
 
