@@ -4,7 +4,7 @@ class SectionContentWidget < Widget
     if Obj.respond_to?('selectable_color_classes')
       Obj.selectable_color_classes(class_name, attribute)
     else
-      IconBoxWidget.fallback_colors
+      SectionContentWidget.fallback_colors
     end
   end
 
