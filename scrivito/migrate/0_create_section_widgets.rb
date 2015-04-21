@@ -38,7 +38,7 @@ class CreateSectionWidgets < ::Scrivito::Migration
       ]
     )
 
-    unless Scrivito::ObjClass.all.to_a.select {|a| a.name == "Video"}.empty?
+    if Scrivito::ObjClass.all.to_a.select {|a| a.name == "Video"}.empty?
       Scrivito::ObjClass.create(
         name: 'Video',
         type: 'generic',

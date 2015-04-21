@@ -1,4 +1,6 @@
 class SectionContentWidget < Widget
+  attribute :section_content, :widgetlist
+  attribute :background_color, :string
 
   def selectable_color_classes(class_name, attribute)
     if Obj.respond_to?('selectable_color_classes')
