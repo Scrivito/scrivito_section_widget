@@ -19,10 +19,10 @@ Add scripts to your script manifest
 
 ## Customization
 
-By default theire following colors avaiable:
+By default the following colors are avaiable:
 transparent black gray light-gray red green blue yellow
 
-if you which to change the selection than add call method `selectable_color_classes` to your obj.rb. The parameters obj_class_name and field_name can be used to restrict the selection for given widgets and/or fields.
+If you which to change the selection than add the method `selectable_color_classes` to your obj.rb. The parameters obj_class_name and field_name can be used to restrict the selection for given widgets and/or fields.
 
     def self.selectable_color_classes(obj_class_name, field_name)
       return ["red","green","blue"]
@@ -48,21 +48,32 @@ You have to define the styles for these classes.
 ## Section over full width of your page
 
 Using Bootstrap 3? Nothing todo.
-Using different Stylesheets you will have a dom knot where the page ist contained.
+
+Using different Stylesheets you will have a dom element where the page ist contained. This Container have to define a width of 100%.
+The Widget adds a new dom element section. The class .container defines your width of the page.
+
 For Example:
 
 ```css
-.container {
+.container { // this comes from your css or css-framework
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-section .container {
+section .container { // this is the style for the widget
   width: 1170px; // change for your main width if needed
-  padding: 15px;
-  margin: 0 auto;
+  padding: 15px 0;
+  margin: 0 auto; // to center your content
 }
 ```
 
-Before migration check the migration file. We will generate a obj class with name `Video`. It could be, that your app included one from an other widget or you created it by your own. If so, you can delete this part of the migration.
+If your App defines a class Video, you have to check if it defines the blob attribute.
+
+```ruby
+class Video < Obj
+  attribute :blob, :binary
+
+  # ... Your Code
+end
+```
