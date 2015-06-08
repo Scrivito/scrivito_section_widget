@@ -1,16 +1,19 @@
-<div class="details-view" >
-  <h4>MP4 Video</h4>
+<%= scrivito_details_for 'MP4 Video' do %>
   <%= scrivito_tag(:div, widget, :background_video_mp4) %>
+<% end %>
 
-  <h4>Webm Video</h4>
+<%= scrivito_details_for 'Webm Video' do %>
   <%= scrivito_tag(:div, widget, :background_video_webm) %>
+<% end %>
 
-  <h4>Ogg Video</h4>
+<%= scrivito_details_for 'Ogg Video' do %>
   <%= scrivito_tag(:div, widget, :background_video_ogg) %>
+<% end %>
 
-  <h4>Background Image (Will be used if small screen, no video tag or no java script)</h4>
+<%= scrivito_details_for 'Background Image (Will be used if small screen, no video tag or no java script)' do %>
   <%= scrivito_tag(:div, widget, :background_image) %>
+<% end %>
 
-  <h4>Height (Used if image is visible)</h4>
+<%= scrivito_details_for 'Height (Used if image is visible)' do %>
   <%= scrivito_tag(:div, widget, :height) %>
-</div>
+<% end %>
