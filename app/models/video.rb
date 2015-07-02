@@ -1,3 +1,3 @@
-class Video < Scrivito::BasicObj
+class Video < Obj
   attribute :blob, :binary
 end
