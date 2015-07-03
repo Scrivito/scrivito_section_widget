@@ -1,7 +1,7 @@
 # ScrivitoSectionWidgets
 
-Add some widgets to your app to seperate some content.
-This gem will add a Section, Video and Parallax effect to your app.
+Add some widgets to your app to seperate the content in vertical parts.
+This gem will add a Section, Headervideo and a Parallax effect to your app.
 
 ## Installation
 
@@ -22,13 +22,13 @@ Add scripts to your script manifest
 By default the following colors are avaiable:
 transparent black gray light-gray red green blue yellow
 
-If you which to change the selection than add the method `selectable_color_classes` to your obj.rb. The parameters obj_class_name and field_name can be used to restrict the selection for given widgets and/or fields.
+If you which to change the selection than add the class method `selectable_color_classes` to your obj.rb. The parameters obj_class_name and field_name can be used to restrict the selection for given widgets and/or fields.
 
     def self.selectable_color_classes(obj_class_name, field_name)
       return ["red","green","blue"]
     end
 
-You have to define the styles for these classes.
+You have to define the styles for your classes.
 
 ```css
 .red {
@@ -55,7 +55,7 @@ The Widget adds a new dom element section. The class .container defines your wid
 For Example:
 
 ```css
-.container { // this comes from your css or css-framework
+.section { // this comes from your css or css-framework
   width: 100%;
   padding: 0;
   margin: 0;
@@ -69,6 +69,7 @@ section .container { // this is the style for the widget
 ```
 
 If your App defines a class Video, you have to check if it defines the blob attribute.
+You can delete the class in your app if nothing more is defined by the class.
 
 ```ruby
 class Video < Obj
