@@ -3,4 +3,24 @@ class SectionParallaxWidget < Widget
   attribute :background_image, :reference
   attribute :height, :string
   attribute :speed, :enum, values: ["fixed", "slow", "medium", "fast", "deactivate"], default: "medium"
+
+  def section_class
+    "parallax scrivito_section_parallax_widget section_speed_#{speed}"
+  end
+
+  def section_style
+    styles = "height: #{height}; max-height: #{height};"
+    styles += "background: url(#{background_image.binary_url}) top center #{'fixed' if speed=='fixed'} no-repeat;" unless with_parallax?
+    return styles
+  end
+
+  def with_parallax?
+    return true unless speed.present?
+    ["slow", "medium", "fast"].include? speed
+  end
+
+  def parallax_speed
+    # legacy support for widgets before speed option
+    speed.presence || 'medium'
+  end
 end

@@ -1,4 +1,6 @@
-<section class="parallax scrivito_section_parallax_widget parallax_speed_<%= widget.speed %>" style="height: <%= widget.height %>; max-height: <%= widget.height %>">
-  <%= scrivito_image_tag widget, :background_image, class: "parallax-image", data: { parallax_speed: widget.speed } %>
+<section class="<%= widget.section_class %>" style="<%= widget.section_style %>">
+  <% if widget.with_parallax? %>
+    <%= scrivito_image_tag(widget, :background_image, class: "parallax-image parallax-image-#{widget.parallax_speed}", data: { parallax_speed: widget.speed }) %>
+  <% end %>
   <%= scrivito_tag(:div, widget, :section_content, class: 'container') %>
 </section>

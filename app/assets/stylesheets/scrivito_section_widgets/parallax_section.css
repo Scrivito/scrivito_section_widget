@@ -11,13 +11,13 @@
   height: auto;
 }
 
-.scrivito_section_parallax_widget.parallax_speed_fixed .parallax-image {
-  position: fixed;
-}
-
 .scrivito_section_video_widget video {
   width: 100%;
   display: block;
+}
+
+.section_speed_fixed {
+  background-size: cover !important;
 }
 
 .scrivito_section_video_widget .container {
