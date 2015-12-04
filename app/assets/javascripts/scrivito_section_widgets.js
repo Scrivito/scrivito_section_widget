@@ -10,5 +10,4 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require scrivito_advanced_editors
 //= require_tree ./scrivito_section_widgets

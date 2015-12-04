@@ -7,7 +7,7 @@ require "scrivito_section_widgets/version"
 Gem::Specification.new do |s|
   s.name        = "scrivito_section_widgets"
   s.version     = ScrivitoSectionWidgets::VERSION
-  
+
   s.authors     = ["Scrivito"]
   s.email       = ["support@scrivito.com"]
   s.homepage    = "https://www.scrivito.com"
@@ -23,8 +23,7 @@ Gem::Specification.new do |s|
   ]
 
   s.add_dependency 'bundler'
-  s.add_dependency 'scrivito_sdk'
-  s.add_dependency 'scrivito_advanced_editors'
+  s.add_dependency 'scrivito'
 
   s.add_development_dependency 'rake'
 end
