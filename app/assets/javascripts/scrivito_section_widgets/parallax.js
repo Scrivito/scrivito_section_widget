@@ -42,7 +42,6 @@ function set_dimension(images) {
   });
 }
 
-
 function set_background_positions(images) {
   $.each(images, function(i, image) {
     set_background_position(image);

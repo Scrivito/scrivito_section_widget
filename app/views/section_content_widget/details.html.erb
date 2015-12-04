@@ -1,5 +1,9 @@
 <div class="details-view" >
   <%= scrivito_details_for 'Background Color' do %>
-    <%= render 'scrivito_advanced_editors/color_picker', widget: widget, attribute: :background_color  %>
+    <%= scrivito_tag(:div, widget, :background_color, data: {colors_list: widget.selectable_color_classes})  %>
+  <% end %>
+
+  <%= scrivito_details_for 'Margin top and bottom' do %>
+    <%= scrivito_tag(:div, widget, :padding_size) %>
   <% end %>
 </div>
