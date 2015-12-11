@@ -5,7 +5,7 @@ class SectionContentWidget < Widget
 
   def selectable_color_classes
     if Obj.respond_to?('selectable_color_classes')
-      Obj.selectable_color_classes(class_name, attribute)
+      Obj.selectable_color_classes('section_content_widget', 'background_color')
     else
       SectionContentWidget.fallback_colors
     end
