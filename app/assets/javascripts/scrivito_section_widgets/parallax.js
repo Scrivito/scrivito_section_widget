@@ -9,7 +9,7 @@ $(function(){
   scrivito.on('content', function() {
     var images = $(".parallax-image-fast, .parallax-image-medium, .parallax-image-slow");
 
-    if($('body').width() > 1024) {
+    if($('body').width() > 1024 && images.length > 0) {
       set_background_positions(images);
 
       $(window).on('scroll', function(event) {
