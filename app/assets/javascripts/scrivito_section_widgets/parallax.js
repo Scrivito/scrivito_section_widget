@@ -63,7 +63,7 @@ function set_background_position(image) {
 function calulate_position(image, value) {
   var speed = data_to_speed(value);
   var value = (caluclate_offset(image) * speed) + "px";
-  return 'translate3d(0px, '+ value +', 0px)'
+  return 'translate3d(-50%, '+ value +', 0px)'
 }
 
 function caluclate_offset(image) {
