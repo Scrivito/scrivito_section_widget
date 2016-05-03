@@ -1,3 +1,3 @@
 module ScrivitoSectionWidgets
-  VERSION = "0.90.1"
+  VERSION = "1.0.0"
 end
