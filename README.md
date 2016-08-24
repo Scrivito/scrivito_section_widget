@@ -91,5 +91,11 @@ en:
   scrivito_section_video_widget:
     thumbnail:
       title: Background Video
-      description: Add facebook social plugins to the page
+      description: Add a background Video as section to your page
+    details:
+      background_video_mp4: Video MP4
+      background_video_webm: Video WebM
+      background_video_ogg: Video OGG
+      background_image: Background Image
+      height: Height
 ```
