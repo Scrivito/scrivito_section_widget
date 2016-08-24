@@ -83,7 +83,11 @@ en:
   scrivito_section_parallax_widget:
     thumbnail:
       title: Parallax
-      description: Add facebook social plugins to the page
+      description: Add an image with parallax effect
+    details:
+      background_image: Background Image
+      speed: Speed
+      height: Height
   scrivito_section_video_widget:
     thumbnail:
       title: Background Video
