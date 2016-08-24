@@ -66,3 +66,26 @@ def self.section_widgets
   [SectionContentWidget, SectionVideoWidget, SectionParallaxWidget]
 end
 ```
+
+## Localization
+
+The following code represents the default localization for English. Copy it to your `en.yml` and change it if necessary:
+
+```yaml
+en:
+  scrivito_section_content_widget:
+    thumbnail:
+      title: Section
+      description: Add a section for your content. A Section can have a Background color to seperate some content
+    details:
+      background_color: Background Color
+      padding_size: Padding top and bottom
+  scrivito_section_parallax_widget:
+    thumbnail:
+      title: Parallax
+      description: Add facebook social plugins to the page
+  scrivito_section_video_widget:
+    thumbnail:
+      title: Background Video
+      description: Add facebook social plugins to the page
+```

@@ -1,9 +1,7 @@
-<div class="details-view" >
-  <%= scrivito_details_for 'Background Color' do %>
-    <%= scrivito_tag(:div, widget, :background_color, data: {colors_list: widget.selectable_color_classes})  %>
-  <% end %>
+<%= scrivito_details_for t('scrivito_section_content_widget.details.background_color', default: 'Background Color') do %>
+  <%= scrivito_tag(:div, widget, :background_color, data: {colors_list: widget.selectable_color_classes})  %>
+<% end %>
 
-  <%= scrivito_details_for 'Margin top and bottom' do %>
-    <%= scrivito_tag(:div, widget, :padding_size) %>
-  <% end %>
-</div>
+<%= scrivito_details_for t('scrivito_section_content_widget.details.padding_size', default: 'Padding top and bottom') do %>
+  <%= scrivito_tag(:div, widget, :padding_size) %>
+<% end %>

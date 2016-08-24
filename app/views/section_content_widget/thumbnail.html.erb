@@ -1,11 +1,3 @@
-<div class="scrivito_editing_widget_visualization">
-  <%= image_tag("section_content.png") %>
-</div>
-
-<div class="scrivito_editing_widget_title">
-  Section for content
-</div>
-
-<div class="scrivito_editing_widget_description">
-  Add a section for your content. A Section can have a Background color to seperate some content.
-</div>
+<%= scrivito_thumbnail t('scrivito_section_content_widget.thumbnail.title', default: 'Section'), image_tag("widget_section_content.png") do %>
+  <%= t('scrivito_section_content_widget.thumbnail.description', default: 'Add a section for your content. A Section can have a Background color to seperate some content') %>
+<% end %>
