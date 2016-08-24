@@ -22,8 +22,5 @@ Gem::Specification.new do |s|
     "Rakefile"
   ]
 
-  s.add_dependency 'bundler'
   s.add_dependency 'scrivito'
-
-  s.add_development_dependency 'rake'
 end
