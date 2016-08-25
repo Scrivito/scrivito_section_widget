@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scrivito_section_widgets (1.0.1)
+    scrivito_section_widgets (1.0.2)
       scrivito
 
 GEM
@@ -149,4 +149,4 @@ DEPENDENCIES
   scrivito_section_widgets!
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
