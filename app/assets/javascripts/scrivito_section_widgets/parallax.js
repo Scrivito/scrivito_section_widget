@@ -1,11 +1,9 @@
-$(function(){
-
+(function($, App) {
   window.requestAnimationFrame = window.requestAnimationFrame
    || window.mozRequestAnimationFrame
    || window.webkitRequestAnimationFrame
    || window.msRequestAnimationFrame
    || function(f){setTimeout(f, 1000/60)}
-
   scrivito.on('content', function() {
     var images = $(".parallax-image-fast, .parallax-image-medium, .parallax-image-slow");
 
@@ -24,7 +22,7 @@ $(function(){
     }
 
   });
-});
+})(jQuery, this);
 
 function set_dimension(images) {
   var height = 0;
