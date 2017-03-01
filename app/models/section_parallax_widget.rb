@@ -10,7 +10,7 @@ class SectionParallaxWidget < Widget
 
   def section_style
     styles = "height: #{height}; max-height: #{height};"
-    styles += "background: url(#{background_image.binary_url}) top center #{'fixed' if speed=='fixed'} no-repeat;" unless with_parallax?
+    styles += "background: url(#{background_image.binary_url}) top center #{'fixed' if speed=='fixed'} no-repeat;" if !with_parallax? && background_image.present?
     return styles
   end
 
