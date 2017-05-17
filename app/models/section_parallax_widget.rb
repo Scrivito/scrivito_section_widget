@@ -23,8 +23,4 @@ class SectionParallaxWidget < Widget
     # legacy support for widgets before speed option
     speed.presence || 'medium'
   end
-
-  def column_size(image)
-    self.container.column_size(image)
-  end
 end
