@@ -1,7 +1,7 @@
 <section class="<%= widget.section_class %>" style="<%= widget.section_style %>">
   <div class="parallax-container">
     <% if widget.with_parallax? %>
-      <%= scrivito_image_tag(widget, :background_image, class: "parallax-image parallax-image-#{widget.parallax_speed}", data: { parallax_speed: widget.speed }) %>
+      <%= scrivito_image_tag(widget, :background_image, class: "parallax-image parallax-image-#{widget.parallax_speed}", data: { parallax_speed: widget.speed }, scrivito_editors_filter_context: {_image: true}) %>
     <% end %>
     <%= scrivito_tag(:div, widget, :section_content, class: 'container') %>
   </div>
