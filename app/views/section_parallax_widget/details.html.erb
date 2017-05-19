@@ -1,5 +1,5 @@
 <%= scrivito_details_for t('scrivito_section_parallax_widget.details.background_image', default: 'Background Image') do %>
-  <%= scrivito_tag(:div, widget, :background_image) %>
+  <%= scrivito_tag(:div, widget, :background_image, data: { scrivito_editors_filter_context: {_images: true} }) %>
 <% end %>
 
 <%= scrivito_details_for t('scrivito_section_parallax_widget.details.speed', default: 'Speed') do %>
