@@ -12,6 +12,12 @@ Add this line to your stylesheet manifest:
 
     *= require scrivito_section_widgets
 
+If you use `sass-rails` for your application stylesheet manifest (e.g. `application.scss` or `application.css.scss`) add the following:
+
+    @import "scrivito_section_widgets/base_section";
+    @import "scrivito_section_widgets/parallax_section";
+    @import "scrivito_section_widgets/colors";
+
 Add this line to your JavaScript manifest:
 
     //= require scrivito_section_widgets
