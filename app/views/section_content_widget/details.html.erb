@@ -5,3 +5,7 @@
 <%= scrivito_details_for t('scrivito_section_content_widget.details.padding_size', default: 'Padding top and bottom') do %>
   <%= scrivito_tag(:div, widget, :padding_size) %>
 <% end %>
+
+<%= scrivito_details_for t('scrivito_section_content_widget.details.styles', default: 'Styles') do %>
+  <%= scrivito_tag :div, widget, :styles, data: {multi_select_list: widget.scrivito_selectable_style_classes} %>
+<% end %>
