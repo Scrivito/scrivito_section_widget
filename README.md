@@ -86,6 +86,7 @@ en:
     details:
       background_color: Background Color
       padding_size: Padding top and bottom
+      styles: Styles
   scrivito_section_parallax_widget:
     thumbnail:
       title: Parallax
@@ -104,4 +105,43 @@ en:
       background_video_ogg: Video OGG
       background_image: Background Image
       height: Height
+```
+
+There is also an attribute for different styles. It holds a class for different styles like `drop_shadow`, `more_margin`, `highlight`, ...
+
+Using advance editors, you can define the selectable classes by adding a class method to your `obj.rb`:
+
+```ruby
+  class Obj < Scrivito::BasicObj
+    ...
+    def self.scrivito_selectable_style_classes
+      ['drop_shadow','margin_top','move_left','highlight', 'rounded']
+    end
+    ...
+  end
+```
+
+Than you have to define a css class for your selections:
+
+```css
+  .drop_shadow {
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .margin_top {
+    margin-top: 10px;
+  }
+
+  .move_left {
+    width: auto;
+    margin-left: -20px;
+  }
+
+  .highlight {
+    outline: #cc0000 solid 3px;
+  }
+
+  .rounded {
+    border-radius: 5px;
+  }
 ```
