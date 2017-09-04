@@ -4,7 +4,7 @@
   $(function() {
     var videos = $(".video-tag");
 
-    $('body').on('click', '.scrivito_section_video_widget', function() {
+    $('body').on('click', '.scrivito_section_video_widget :not(a)', function() {
       var video = $(this).find('.parallax-video').get(0);
       event.preventDefault();
       if(video.paused){
