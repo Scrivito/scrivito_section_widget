@@ -4,16 +4,6 @@
   $(function() {
     var videos = $(".video-tag");
 
-    $('body').on('click', '.scrivito_section_video_widget :not(a)', function(event) {
-      var video = $(this).find('.parallax-video').get(0);
-      event.preventDefault();
-      if(video.paused){
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-
     $.each(videos, function(index, elem) {
       var mp4 = $(elem).data('source-mp4');
       var ogg = $(elem).data('source-ogg');
